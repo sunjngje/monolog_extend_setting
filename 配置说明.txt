@@ -1,0 +1,9 @@
+1，在根目录创建logs目录<用来存放日志>
+
+
+2，进入扩展目录，打开cmd执行composer require 
+monolog/monolog（若没有composer自行安装）
+
+
+
+3，把log.rar解压到工具类目录下<log工具文件用来引用momolog扩展>

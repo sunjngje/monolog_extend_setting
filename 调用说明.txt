@@ -1,0 +1,20 @@
+定义了3种
+Log::info('msg'，$data);
+
+日志内容组成：时间+日志种类+提示msg+file_url+行数+data（输出的内容）
+
+
+Log::error('error',$data);
+
+日志内容组成：时间+日志种类+提示msg+file_url+class+function+行数
++data（输出的内容）
+
+Log::warning('warning',$data);
+日志内容组成：时间+日志种类+提示msg+file_url+class+function+行数
++data（输出的内容）
+
+
+msg：提示信息
+
+$data: 想要输出的数据（必须为数组）《不输出时，此项为空：
+例：Log::info('msg');》
