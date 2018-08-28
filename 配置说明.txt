@@ -1,9 +1,24 @@
-1£¬ÔÚ¸ùÄ¿Â¼´´½¨logsÄ¿Â¼<ÓÃÀ´´æ·ÅÈÕÖ¾>
+1ï¼Œåœ¨æ ¹ç›®å½•åˆ›å»ºlogsç›®å½•<ç”¨æ¥å­˜æ”¾æ—¥å¿—>
 
 
-2£¬½øÈëÀ©Õ¹Ä¿Â¼£¬´ò¿ªcmdÖ´ÐÐcomposer require 
-monolog/monolog£¨ÈôÃ»ÓÐcomposer×ÔÐÐ°²×°£©
+2ï¼Œè¿›å…¥æ‰©å±•ç›®å½•ï¼Œæ‰“å¼€cmdæ‰§è¡Œcomposer require 
+monolog/monologï¼ˆè‹¥æ²¡æœ‰composerè‡ªè¡Œå®‰è£…ï¼‰
 
 
 
-3£¬°Ñlog.rar½âÑ¹µ½¹¤¾ßÀàÄ¿Â¼ÏÂ<log¹¤¾ßÎÄ¼þÓÃÀ´ÒýÓÃmomologÀ©Õ¹>
+3ï¼ŒæŠŠlog.rarè§£åŽ‹åˆ°å·¥å…·ç±»ç›®å½•ä¸‹<logå·¥å…·æ–‡ä»¶ç”¨æ¥å¼•ç”¨momologæ‰©å±•>
+
+
+4ï¼Œlibrary/kernel.php----function my_autoload()
+å¢žåŠ ï¼šstatic public function my_autoload($classname)
+	{
+		//echo 'ddddddd my_autoload kernel';
+        $filename = dirname(__FILE__)."/class/log/{$classname}.php";
+//        echo $filename;
+        if(is_file($filename)) {
+            include_once $filename;
+            return;
+        }
+
+	}
+}
